@@ -1,5 +1,35 @@
+// Variables
+
+$primary-font: white;
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: $primary-font;
+  background-color: #313639;
+}
+
+h1 { 
+  padding-top: 2vh;
+  // height: 10vh;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.images { 
+  // display: none;
 }
 
