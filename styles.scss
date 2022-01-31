@@ -72,3 +72,31 @@ h3 {
   }
 }
 
+.gamestatusbuttons {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  font-size: 5px;
+
+  &--newgame {
+    background-color: black;
+    color: #fff;
+    height: 5vh;
+    width: 18vw;
+    border: solid 1px $primary-color;
+    font-size: 10px;
+  }
+
+  &--answer {
+    background-color: black;
+    color: #fff;
+    height: 5vh;
+    width: 15vw;
+    border: solid 1px $primary-color;
+    font-size: 10px;
+  }
+}
+
+

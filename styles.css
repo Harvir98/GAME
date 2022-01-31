@@ -74,4 +74,37 @@ h3 {
   color: black;
   border: solid 2px black;
 }
+
+.gamestatusbuttons {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5vw;
+  font-size: 5px;
+}
+
+.gamestatusbuttons--newgame {
+  background-color: black;
+  color: #fff;
+  height: 5vh;
+  width: 18vw;
+  border: solid 1px #fff;
+  font-size: 10px;
+}
+
+.gamestatusbuttons--answer {
+  background-color: black;
+  color: #fff;
+  height: 5vh;
+  width: 15vw;
+  border: solid 1px #fff;
+  font-size: 10px;
+}
 /*# sourceMappingURL=styles.css.map */
