@@ -4,65 +4,176 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hangman</title>
+    <title>SNAKE</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" async defer></script>
   </head>
   <body>
     
-    <h1>HANGMAN</h1>
-    <h3>Coding Edition</h3>
+    <h1>SNAKE</h1>
+    <p>Score: </p>
 
-    <section class="lines">
-      <p>_</p>
-      <p>_</p>
-      <p>_</p>
-      <p>_</p>
+    <section class="box">
+      <div class="box__individualbox" id="box-1">1</div>
+      <div class="box__individualbox" id="box-2">2</div>
+      <div class="box__individualbox" id="box-3">3</div>
+      <div class="box__individualbox" id="box-4">4</div>
+      <div class="box__individualbox" id="box-5">5</div>
+      <div class="box__individualbox" id="box-6">6</div>
+      <div class="box__individualbox" id="box-7">7</div>
+      <div class="box__individualbox" id="box-8">8</div>
+      <div class="box__individualbox" id="box-9">9</div>
+      <div class="box__individualbox" id="box-10">10</div>
+      <div class="box__individualbox" id="box-11">11</div>
+      <div class="box__individualbox" id="box-12"></div>
+      <div class="box__individualbox" id="box-13"></div>
+      <div class="box__individualbox" id="box-14"></div>
+      <div class="box__individualbox" id="box-15"></div>
+      <div class="box__individualbox" id="box-16"></div>
+      <div class="box__individualbox" id="box-17"></div>
+      <div class="box__individualbox" id="box-18"></div>
+      <div class="box__individualbox" id="box-19"></div>
+      <div class="box__individualbox" id="box-20"></div>
+      <div class="box__individualbox" id="box-21">1</div>
+      <div class="box__individualbox" id="box-22"></div>
+      <div class="box__individualbox" id="box-23"></div>
+      <div class="box__individualbox" id="box-24"></div>
+      <div class="box__individualbox" id="box-25"></div>
+      <div class="box__individualbox" id="box-26"></div>
+      <div class="box__individualbox" id="box-27"></div>
+      <div class="box__individualbox" id="box-28"></div>
+      <div class="box__individualbox" id="box-29"></div>
+      <div class="box__individualbox" id="box-30"></div>
+      <div class="box__individualbox" id="box-31">1</div>
+      <div class="box__individualbox" id="box-32"></div>
+      <div class="box__individualbox" id="box-33"></div>
+      <div class="box__individualbox" id="box-34"></div>
+      <div class="box__individualbox" id="box-35"></div>
+      <div class="box__individualbox" id="box-36"></div>
+      <div class="box__individualbox" id="box-37"></div>
+      <div class="box__individualbox" id="box-38"></div>
+      <div class="box__individualbox" id="box-39"></div>
+      <div class="box__individualbox" id="box-40"></div>
+      <div class="box__individualbox" id="box-41">1</div>
+      <div class="box__individualbox" id="box-42"></div>
+      <div class="box__individualbox" id="box-43"></div>
+      <div class="box__individualbox" id="box-44"></div>
+      <div class="box__individualbox" id="box-45"></div>
+      <div class="box__individualbox" id="box-46"></div>
+      <div class="box__individualbox" id="box-47"></div>
+      <div class="box__individualbox" id="box-48"></div>
+      <div class="box__individualbox" id="box-49"></div>
+      <div class="box__individualbox" id="box-50"></div>
+      <div class="box__individualbox" id="box-51">1</div>
+      <div class="box__individualbox" id="box-52"></div>
+      <div class="box__individualbox" id="box-53"></div>
+      <div class="box__individualbox" id="box-54"></div>
+      <div class="box__individualbox" id="box-55"></div>
+      <div class="box__individualbox" id="box-56"></div>
+      <div class="box__individualbox" id="box-57"></div>
+      <div class="box__individualbox" id="box-58"></div>
+      <div class="box__individualbox" id="box-59"></div>
+      <div class="box__individualbox" id="box-60"></div>
+      <div class="box__individualbox" id="box-61">1</div>
+      <div class="box__individualbox" id="box-62"></div>
+      <div class="box__individualbox" id="box-63"></div>
+      <div class="box__individualbox" id="box-64"></div>
+      <div class="box__individualbox" id="box-65"></div>
+      <div class="box__individualbox" id="box-66"></div>
+      <div class="box__individualbox" id="box-67"></div>
+      <div class="box__individualbox" id="box-68"></div>
+      <div class="box__individualbox" id="box-69"></div>
+      <div class="box__individualbox" id="box-70"></div>
+      <div class="box__individualbox" id="box-71">1</div>
+      <div class="box__individualbox" id="box-72"></div>
+      <div class="box__individualbox" id="box-73"></div>
+      <div class="box__individualbox" id="box-74"></div>
+      <div class="box__individualbox" id="box-75"></div>
+      <div class="box__individualbox" id="box-76"></div>
+      <div class="box__individualbox" id="box-77"></div>
+      <div class="box__individualbox" id="box-78"></div>
+      <div class="box__individualbox" id="box-79"></div>
+      <div class="box__individualbox" id="box-80"></div>
+      <div class="box__individualbox" id="box-81">1</div>
+      <div class="box__individualbox" id="box-82"></div>
+      <div class="box__individualbox" id="box-83"></div>
+      <div class="box__individualbox" id="box-84"></div>
+      <div class="box__individualbox" id="box-85"></div>
+      <div class="box__individualbox" id="box-86"></div>
+      <div class="box__individualbox" id="box-87"></div>
+      <div class="box__individualbox" id="box-88"></div>
+      <div class="box__individualbox" id="box-89"></div>
+      <div class="box__individualbox" id="box-90"></div>
+      <div class="box__individualbox" id="box-91">1</div>
+      <div class="box__individualbox" id="box-92"></div>
+      <div class="box__individualbox" id="box-93"></div>
+      <div class="box__individualbox" id="box-94"></div>
+      <div class="box__individualbox" id="box-95"></div>
+      <div class="box__individualbox" id="box-96"></div>
+      <div class="box__individualbox" id="box-97"></div>
+      <div class="box__individualbox" id="box-98"></div>
+      <div class="box__individualbox" id="box-99"></div>
+      <div class="box__individualbox" id="box-100"></div>
     </section>
 
-    <!-- <section class="images">
-      <img src="./HangmanImages/Frame 1.png" alt="Frame 1" />
-      <img src="./HangmanImages/Frame 2.png" alt="Frame 2" />
-      <img src="./HangmanImages/Frame 3.png" alt="Frame 3" />
-      <img src="./HangmanImages/Frame 4.png" alt="Frame 4" />
-      <img src="./HangmanImages/Frame 5.png" alt="Frame 5" />
-      <img src="./HangmanImages/Frame 6.png" alt="Frame 6" />
-      <img src="./HangmanImages/Frame 7.png" alt="Frame 7" />
-    </section> -->
 
-    <section class="gamestatusbuttons">
-      <button class="gamestatusbuttons--newgame">NEW GAME</button>
-      <button class="gamestatusbuttons--answer">ANSWER</button>
 
-    </section>
-
-    <section class="buttons">
-      <button class="buttons__individual" id="A">A</button>
-      <button class="buttons__individual" id="B">B</button>
-      <button class="buttons__individual" id="C">C</button>
-      <button class="buttons__individual" id="D">D</button>
-      <button class="buttons__individual" id="E">E</button>
-      <button class="buttons__individual" id="F">F</button>
-      <button class="buttons__individual" id="G">G</button>
-      <button class="buttons__individual" id="H">H</button>
-      <button class="buttons__individual">I</button>
-      <button class="buttons__individual">J</button>
-      <button class="buttons__individual">K</button>
-      <button class="buttons__individual">L</button>
-      <button class="buttons__individual">M</button>
-      <button class="buttons__individual">N</button>
-      <button class="buttons__individual">O</button>
-      <button class="buttons__individual">P</button>
-      <button class="buttons__individual">Q</button>
-      <button class="buttons__individual">R</button>
-      <button class="buttons__individual">S</button>
-      <button class="buttons__individual">T</button>
-      <button class="buttons__individual">U</button>
-      <button class="buttons__individual">V</button>
-      <button class="buttons__individual">W</button>
-      <button class="buttons__individual">X</button>
-      <button class="buttons__individual">Y</button>
-      <button class="buttons__individual" id="Z">Z</button>
-    </section>
+    
   </body>
 </html>
+
+
+
+
+<!-- <h3>Coding Edition</h3>
+
+<section class="lines">
+  <p>_</p>
+  <p>_</p>
+  <p>_</p>
+  <p>_</p>
+</section>
+
+<!-- <section class="images">
+  <img src="./HangmanImages/Frame 1.png" alt="Frame 1" />
+  <img src="./HangmanImages/Frame 2.png" alt="Frame 2" />
+  <img src="./HangmanImages/Frame 3.png" alt="Frame 3" />
+  <img src="./HangmanImages/Frame 4.png" alt="Frame 4" />
+  <img src="./HangmanImages/Frame 5.png" alt="Frame 5" />
+  <img src="./HangmanImages/Frame 6.png" alt="Frame 6" />
+  <img src="./HangmanImages/Frame 7.png" alt="Frame 7" />
+</section> -->
+<!-- 
+<section class="gamestatusbuttons">
+  <button class="gamestatusbuttons--newgame">NEW GAME</button>
+  <button class="gamestatusbuttons--answer">ANSWER</button>
+</section>
+
+<section class="buttons">
+  <button class="buttons__individual" id="A">A</button>
+  <button class="buttons__individual" id="B">B</button>
+  <button class="buttons__individual" id="C">C</button>
+  <button class="buttons__individual" id="D">D</button>
+  <button class="buttons__individual" id="E">E</button>
+  <button class="buttons__individual" id="F">F</button>
+  <button class="buttons__individual" id="G">G</button>
+  <button class="buttons__individual" id="H">H</button>
+  <button class="buttons__individual">I</button>
+  <button class="buttons__individual">J</button>
+  <button class="buttons__individual">K</button>
+  <button class="buttons__individual">L</button>
+  <button class="buttons__individual">M</button>
+  <button class="buttons__individual">N</button>
+  <button class="buttons__individual">O</button>
+  <button class="buttons__individual">P</button>
+  <button class="buttons__individual">Q</button>
+  <button class="buttons__individual">R</button>
+  <button class="buttons__individual">S</button>
+  <button class="buttons__individual">T</button>
+  <button class="buttons__individual">U</button>
+  <button class="buttons__individual">V</button>
+  <button class="buttons__individual">W</button>
+  <button class="buttons__individual">X</button>
+  <button class="buttons__individual">Y</button>
+  <button class="buttons__individual" id="Z">Z</button>
+</section> --> -->
