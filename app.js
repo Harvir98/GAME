@@ -3,6 +3,10 @@ let movingRight = false;
 let movingDown = false;
 let movingLeft = false;
 let movingUp = false;
+let appleIndex = 0;
+let currentSnake = [1,1];
+const width = 10;
+let interval = 0;
 
 
 const movingBoxDown = () => {
@@ -95,8 +99,6 @@ const moveUp = (event) => {
   }
 }
  
-// GREEEEEN
-
 document.addEventListener("keydown", moveRight);
 document.addEventListener("keydown", moveDown);
 document.addEventListener("keydown", moveLeft);
@@ -107,40 +109,54 @@ document.addEventListener("keydown", moveUp);
 
 
 
+// collision with border
 
-
-
-
-
-
-
-
-
-
-
-
-
-// Generating a random piece of food in a sqaure 
-  // Math.random
-
-
-// CHANGE CLASS NAME FOR EACH DIRECTION ETC
-// const movingBoxRight = () => {
-//   if (total >=10) {
-//     document.getElementById(`box-${total-10}`).classList.remove("active");
+// const gameOver = () => {
+//   if (`box-${total}` > 8 && `box-${total}` < 6) {
+//     alert ("GAME OVER");
 //   }
-//   document.getElementById(`box-${total}`).classList.add("active");
-//   total += 10
-// } 
-
-// different function for each direction e.g movingboxright
-
-// const changingBoxColor = () => {
-//   const everyBox.classList.add()
-// }
+//   }
 
 
-// .style.backgroundColor="yellow";
+// Setting the score back to 0
+
+// const resetScore = () => {
+//   score = 0;
+//   document.getElementById("output").innerHTML = score;
+// };
+
+// const food = document.getElementsByClassName("food")
+
+// if (onSnake(food))
+
+  // end game function 
+
+
+
+
+
+
+// If the snake hits the border 
+// const moveOutcomes = () => {
+
+// //   if (
+// //     (currentSnake[0] + width >= (width * width) && direction === width) ||
+// //     (currentSnake[0] % width === width -1 && direction === 1) || 
+// //     (currentSnake[0] % width === 0 && direction === -1) ||
+// //     (currentSnake[0] - width < 0 && direction === -width )
+// //   ) {
+// //     return clearInterval(interval)
+// //   }
+
+// // }
+// // setInterval(moveOutcomes, 1000)
+
+
+
+
+
+
+
 
 
 

@@ -33,7 +33,6 @@ h3 {
 }
 
 .box {
-  border: solid 1px #A8201A;
   margin: auto;
   height: 370px;
   width: 370px;
@@ -50,5 +49,9 @@ h3 {
 
 .gameover {
   margin-top: 3vh;
+}
+
+.food {
+  background-color: yellow;
 }
 /*# sourceMappingURL=styles.css.map */
