@@ -3,6 +3,7 @@ let total2 = 99;
 let movingRight = false;
 let movingDown = false;
 let movingLeft = false;
+let movingUp = true; 
 
 
 const movingBoxDown = () => {
@@ -44,6 +45,15 @@ const movingBoxLeft = () => {
 } else return;
 } 
 
+const movingBoxUp = () => {
+  if (movingUp) {
+  if (total2 >= 1) {
+    document.getElementById(`box-${total2+1}`).classList.remove("active");
+  }
+  document.getElementById(`box-${total2}`).classList.add("active");
+  total2 -= 1;
+} else return;
+} 
 // setInterval(movingBoxLeft, 1000);
 
 
@@ -101,7 +111,6 @@ const movingBoxLeft = () => {
 
 
 const moveRight = (event) => {
-  
   if (event.keyCode == 39) {
     movingRight = true;
     movingLeft = false;
@@ -111,7 +120,6 @@ const moveRight = (event) => {
 }
 
 const moveDown = (event) => {
-  
   if (event.keyCode == 40) {
     movingRight = false;
     movingDown = true;
@@ -120,8 +128,12 @@ const moveDown = (event) => {
   }
 }
 
+
+
+
+// Moving Left is not working becuase i have set total2 too 99 like a idiot but how to fix it ???
+
 const moveLeft = (event) => {
-  
   if (event.keyCode == 37) {
     movingRight = false;
     movingLeft = true;
@@ -131,9 +143,12 @@ const moveLeft = (event) => {
 }
 
 
+
+
 document.addEventListener("keydown", moveRight);
 document.addEventListener("keydown", moveDown);
 document.addEventListener("keydown", moveLeft);
+document.addEventListener("keydown", moveUp);
 
 
 
