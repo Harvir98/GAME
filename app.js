@@ -3,18 +3,20 @@ let movingRight = false;
 let movingDown = false;
 let movingLeft = false;
 let movingUp = false;
-let appleIndex = 0;
-let currentSnake = [1,1];
-const width = 10;
-let interval = 0;
 
+
+// let food = Math.floor(Math.random() * 100) + 1;
+// console.log(food)
 
 const movingBoxDown = () => {
   if (movingDown) {
-    if (total >=10) {
+    if (movingDown && total >= 101) {
+      alert ("you lose down");
+      return;
+    } else if (total >=10) {
       document.getElementById(`box-${total-10}`).classList.remove("active");
       // document.getElementById(`box-${total-11}`).classList.remove("active"); Trouble with box-1 going down
-    }
+    } 
     document.getElementById(`box-${total}`).classList.add("active");
     total += 10;
     } else return;
@@ -24,19 +26,28 @@ const movingBoxDown = () => {
 
 const movingBoxRight = () => {
   if (movingRight) {
-    if (total >= 2) {
+    if (movingRight && total + 89 == 100 || total + 79 == 100) {
+      alert ("you lose right");
+      return;
+    } else if (total >= 2) {
       document.getElementById(`box-${total-1}`).classList.remove("active");
     }
+    console.log(total)
     document.getElementById(`box-${total}`).classList.add("active");
     total += 1;
   } else return;
-} 
+}
+
+
 
 // setInterval(movingBoxRight, 1000);
 
 const movingBoxLeft = () => {
   if (movingLeft) {
-  if (total >= 2) {
+    if (total % 10 == 0 && movingLeft) {
+      alert ("twat left");
+      return;
+    } else if (total >= 2) {
     document.getElementById(`box-${total+1}`).classList.remove("active");
   }
   document.getElementById(`box-${total}`).classList.add("active");
@@ -46,12 +57,17 @@ const movingBoxLeft = () => {
 
 const movingBoxUp = () => {
   if (movingUp) {
-  if (total >= 10) {
+    if (movingUp && total < 0) {
+      alert ("you lose up");
+      return;
+    } else if (total >= 10) {
+      
     document.getElementById(`box-${total+10}`).classList.remove("active");
     document.getElementById(`box-${total+11}`).classList.remove("active");
   }
   document.getElementById(`box-${total}`).classList.add("active");
   total -= 10;
+  console.log(total)
 } else return;
 } 
 // setInterval(movingBoxLeft, 1000);
@@ -75,6 +91,7 @@ const moveDown = (event) => {
 
     setInterval(movingBoxDown, 1000);
   }
+  
 }
 
 // Moving Left is not working becuase i have set total2 too 99 like a idiot but how to fix it ???
