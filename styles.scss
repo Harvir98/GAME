@@ -30,18 +30,19 @@ h3 {
   margin: auto;
   height: 370px;
   width: 370px;
+  flex-wrap: wrap;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 
 
-  &__individualbox {
-    // border: solid 1px #CCBEAA;
-  }
+//   &__individualbox {
+//     // border: solid 1px #CCBEAA;
+//   }
 
-  // #box-15 {
-  //   background-color:  red;
-  // }
+//   // #box-15 {
+//   //   background-color:  red;
+//   // }
 
 }
 
@@ -55,6 +56,10 @@ h3 {
 
 .food {
   background-color: yellow;
+}
+
+.snake { 
+  background-color: purple;
 }
 
 
