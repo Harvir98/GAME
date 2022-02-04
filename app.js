@@ -1,31 +1,33 @@
 let total = 1;
+let x = 0;
 let movingRight = false;
 let movingDown = false;
 let movingLeft = false;
 let movingUp = false;
-
-
-// let food = Math.floor(Math.random() * 100) + 1;
-// console.log(food)
+// let foodCreator = Math.floor(Math.random() * 100) + 1;
 
 const movingBoxDown = () => {
+  clearInterval()
   if (movingDown) {
+      total += 10;
     if (movingDown && total >= 101) {
       alert ("you lose down");
       return;
     } else if (total >=10) {
-      document.getElementById(`box-${total-10}`).classList.remove("active");
-      // document.getElementById(`box-${total-11}`).classList.remove("active"); Trouble with box-1 going down
+      document.getElementById(`box-${total-10}`).classList.remove("active"); 
+     } if (total != 1 ) {
+      document.getElementById(`box-${total-11}`).classList.remove("active");
+      
     } 
     document.getElementById(`box-${total}`).classList.add("active");
-    total += 10;
+    
     } else return;
 } 
 
 // setInterval(movingBoxDown, 1000);
 
 const movingBoxRight = () => {
-  if (movingRight) {
+  if (movingRight ) {
     if (movingRight && total + 89 == 100 || total + 79 == 100) {
       alert ("you lose right");
       return;
@@ -35,6 +37,8 @@ const movingBoxRight = () => {
     console.log(total)
     document.getElementById(`box-${total}`).classList.add("active");
     total += 1;
+    x += 1;
+    console.log(x)
   } else return;
 }
 
@@ -52,6 +56,8 @@ const movingBoxLeft = () => {
   }
   document.getElementById(`box-${total}`).classList.add("active");
   total = total - 1;
+  x -= 1
+  console.log(x)
 } else return;
 } 
 
@@ -63,7 +69,7 @@ const movingBoxUp = () => {
     } else if (total >= 10) {
       
     document.getElementById(`box-${total+10}`).classList.remove("active");
-    document.getElementById(`box-${total+11}`).classList.remove("active");
+    // document.getElementById(`box-${total+11}`).classList.remove("active");
   }
   document.getElementById(`box-${total}`).classList.add("active");
   total -= 10;
@@ -74,22 +80,30 @@ const movingBoxUp = () => {
 
 const moveRight = (event) => {
   if (event.keyCode == 39) {
-    movingRight = true;
+  
     movingLeft = false;
     movingDown = false;
     movingUp = false; 
+
+    if(movingRight === false ) {
     setInterval(movingBoxRight, 1000);
+    }
+    movingRight = true
   }
 }
 
 const moveDown = (event) => {
   if (event.keyCode == 40) {
     movingRight = false;
-    movingDown = true;
+    
     movingLeft = false;
     movingUp = false; 
 
+    if (movingDown === false) {
     setInterval(movingBoxDown, 1000);
+    }
+    movingDown = true;
+
   }
   
 }
@@ -99,11 +113,14 @@ const moveDown = (event) => {
 const moveLeft = (event) => {
   if (event.keyCode == 37) {
     movingRight = false;
-    movingLeft = true;
     movingDown = false;
     movingUp = false; 
+
+    if (movingLeft === false) {
     setInterval(movingBoxLeft, 1000);
-  }
+    }
+    movingLeft = true;
+  } 
 }
 
 const moveUp = (event) => {
@@ -111,8 +128,12 @@ const moveUp = (event) => {
     movingRight = false;
     movingLeft = false;
     movingDown = false;
-    movingUp = true; 
+    
+
+    if (movingUp === false ) { 
     setInterval(movingBoxUp, 1000);
+    }
+    movingUp = true;
   }
 }
  
@@ -120,6 +141,12 @@ document.addEventListener("keydown", moveRight);
 document.addEventListener("keydown", moveDown);
 document.addEventListener("keydown", moveLeft);
 document.addEventListener("keydown", moveUp);
+
+// const foodGenerator = () => {
+//   // let food = Math.floor(Math.random() * 100) + 1;
+//   let foodColor = document.getElementById(`box-${foodCreator}`).classList.add("food")
+//   return foodColor;
+// }
 
 
 

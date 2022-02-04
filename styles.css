@@ -33,6 +33,7 @@ h3 {
 }
 
 .box {
+  border: solid 1px #A8201A;
   margin: auto;
   height: 370px;
   width: 370px;
