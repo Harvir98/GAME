@@ -89,37 +89,112 @@ h3 {
 }
 
 .physicalbtns {
-  margin-left: 100px;
+  font-weight: bold;
+  font-size: 20px;
   gap: 30px;
   height: 30px;
   width: 30px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
       grid-template-areas: "a a a" "b c d";
 }
 
 .physicalbtns #arrowup {
+  -webkit-box-shadow: 2px 2px;
+          box-shadow: 2px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: a;
+  background-color: lightgray;
+  height: 40px;
+  width: 40px;
+  color: black;
 }
 
 .physicalbtns #arrowleft {
+  -webkit-box-shadow: 2px 2px;
+          box-shadow: 2px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: b;
+  height: 40px;
+  width: 40px;
+  background-color: lightgray;
+  color: black;
 }
 
 .physicalbtns #arrowdown {
+  -webkit-box-shadow: 2px 2px;
+          box-shadow: 2px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: c;
+  height: 40px;
+  width: 40px;
+  background-color: lightgray;
+  color: black;
 }
 
 .physicalbtns #arrowright {
+  -webkit-box-shadow: 2px 2px;
+          box-shadow: 2px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: d;
+  height: 40px;
+  width: 40px;
+  background-color: lightgray;
+  color: black;
+}
+
+@media screen and (min-width: 950px) {
+  .physicalbtns {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

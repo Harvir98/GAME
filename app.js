@@ -102,22 +102,23 @@ const control = (event) => {
   }
 }
 
-  arrowUpBtn.addEventListener("touchstart", event => {
+  arrowUpBtn.addEventListener("click", event => {
     direction =-width
   })
 
-  arrowDownBtn.addEventListener("touchstart", event => {
+  arrowDownBtn.addEventListener("click", event => {
     direction =+width
   })
 
-  arrowLeftBtn.addEventListener("touchstart", event => {
+  arrowLeftBtn.addEventListener("click", event => {
     direction = -1
   })
 
-  arrowRightBtn.addEventListener("touchstart", event => {
+  arrowRightBtn.addEventListener("click", event => {
     direction = 1
   })
 
+  // change back to touchstart
 
  
 document.addEventListener("keydown", control);
