@@ -5,12 +5,13 @@
 
 body {
   background-color: #0F8B8D;
-  color: #A8201A;
+  background-color: #A8201A;
+  color: #fff;
 }
 
 h1 {
   font-family: helvetica;
-  color: #A8201A;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +23,7 @@ h1 {
 
 h3 {
   font-family: helvetica;
-  color: #A8201A;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +34,7 @@ h3 {
 }
 
 .box {
-  border: solid 1px #A8201A;
+  border: solid 5px white;
   margin: auto;
   height: 370px;
   width: 370px;
@@ -44,6 +45,11 @@ h3 {
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.box__individualbox {
+  border: solid 1.5px white;
+  background-color: lightgray;
 }
 
 .active {
