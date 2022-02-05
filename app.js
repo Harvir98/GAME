@@ -53,6 +53,7 @@ const moveOutcomes = () => {
     (currentSnake[0] - width < 0 && direction === -width) ||  //if snake hits the top
     squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
   ) {
+    alert("Game Over!!")
     return clearInterval(interval) //this will clear the interval if any of the above happen
   }
 
@@ -64,9 +65,9 @@ const moveOutcomes = () => {
   if(squares[currentSnake[0]].classList.contains('food')) {
     squares[currentSnake[0]].classList.remove('food')
     squares[tail].classList.add('snake')
-    currentSnake.push(tail)
-    randomApple()
-    score++
+    currentSnake.push(tail) 
+    randomApple() // generate new apple
+    score++ //plus one to the score
     scoreDisplay.textContent = score
     clearInterval(interval)
     intervalTime = intervalTime * speed
