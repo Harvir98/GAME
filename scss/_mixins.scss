@@ -1,0 +1,6 @@
+@mixin headers {
+  font-family: $primary-font;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
