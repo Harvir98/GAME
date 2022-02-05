@@ -38,6 +38,7 @@ h3 {
   margin: auto;
   height: 370px;
   width: 370px;
+  margin-bottom: 25px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -ms-grid;
@@ -85,5 +86,40 @@ h3 {
 
 .badfood {
   background-color: black;
+}
+
+.physicalbtns {
+  margin-left: 100px;
+  gap: 30px;
+  height: 30px;
+  width: 30px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "a a a" "b c d";
+}
+
+.physicalbtns #arrowup {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: a;
+}
+
+.physicalbtns #arrowleft {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: b;
+}
+
+.physicalbtns #arrowdown {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: c;
+}
+
+.physicalbtns #arrowright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: d;
 }
 /*# sourceMappingURL=styles.css.map */

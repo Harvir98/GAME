@@ -102,19 +102,19 @@ const control = (event) => {
   }
 }
 
-  arrowUpBtn.addEventListener("click", event => {
+  arrowUpBtn.addEventListener("touchstart", event => {
     direction =-width
   })
 
-  arrowDownBtn.addEventListener("click", event => {
+  arrowDownBtn.addEventListener("touchstart", event => {
     direction =+width
   })
 
-  arrowLeftBtn.addEventListener("click", event => {
+  arrowLeftBtn.addEventListener("touchstart", event => {
     direction = -1
   })
 
-  arrowRightBtn.addEventListener("click", event => {
+  arrowRightBtn.addEventListener("touchstart", event => {
     direction = 1
   })
 
