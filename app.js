@@ -23,10 +23,10 @@ const startGame = () => {
   console.log("working")
   currentSnake.forEach(index => squares[index].classList.remove("snake"))
   squares[appleIndex].classList.remove("food")
-  clearInterval(interval)
-  randomApple()
+  clearInterval(interval) // Resetting interval back to 0
+  randomApple() // function created later that generated apple if 
   direction = 1
-  scoreDisplay.innerText = score // maybe can change to .HTML
+  scoreDisplay.innerHTML = score // maybe can change to .HTML
   intervalTime = 800
   currentSnake = [2, 1, 0]
   currentIndex = 0
@@ -65,20 +65,20 @@ const moveOutcomes = () => {
   squares[tail].classList.remove('snake')  //removes class of snake from the TAIL
   currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the array
 
-  //deals with snake getting apple
-  
+  // Dealing with snake getting the apple and consequences
+
   if(squares[currentSnake[0]].classList.contains('food')) { 
     squares[currentSnake[0]].classList.remove('food')
     squares[tail].classList.add('snake')
     currentSnake.push(tail) 
     randomApple() // generate new apple
     score++ //plus one to the score
-    scoreDisplay.innerHTML = score
+    scoreDisplay.innerHTML = score // display new score
     clearInterval(interval)
     intervalTime = intervalTime * speed
     interval = setInterval(moveOutcomes, intervalTime)
   }
-  squares[currentSnake[0]].classList.add('snake')
+  squares[currentSnake[0]].classList.add('snake') // Add snake class to the head
 }
 
 
