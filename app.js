@@ -1,4 +1,3 @@
-// document.addEventListener("DOMCONTENTLOADED", () => {
 const squares = document.getElementsByClassName("box__individualbox");
 const scoreDisplay = document.querySelector("span");
 const startBtn = document.querySelector(".gamebuttons__start");
@@ -6,9 +5,6 @@ const arrowUpBtn = document.getElementById("arrowup");
 const arrowDownBtn = document.getElementById("arrowdown");
 const arrowLeftBtn = document.getElementById("arrowleft");
 const arrowRightBtn = document.getElementById("arrowright");
-
-
-console.log(startBtn)
 
 const width = 10 // width of the grid is 10 
 let currentIndex = 0 // let becuase index will change and 0 will be first div in grid
@@ -102,19 +98,20 @@ const control = (event) => {
   }
 }
 
-  arrowUpBtn.addEventListener("click", event => {
-    direction =-width
+// Buttons for mobile version
+  arrowUpBtn.addEventListener("touchstart", event => {
+    direction =- width
   })
 
-  arrowDownBtn.addEventListener("click", event => {
-    direction =+width
+  arrowDownBtn.addEventListener("touchstart", event => {
+    direction =+ width
   })
 
-  arrowLeftBtn.addEventListener("click", event => {
+  arrowLeftBtn.addEventListener("touchstart", event => {
     direction = -1
   })
 
-  arrowRightBtn.addEventListener("click", event => {
+  arrowRightBtn.addEventListener("touchstart", event => {
     direction = 1
   })
 
@@ -132,7 +129,6 @@ startBtn.addEventListener("click", startGame);
 
 
 
-// })
 
 
 

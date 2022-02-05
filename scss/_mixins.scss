@@ -4,3 +4,14 @@
   display: flex;
   justify-content: center;
 }
+
+@mixin physicalbuttons {
+  box-shadow: 2px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $fourth-color;
+  height: 40px;
+  width: 40px;
+  color: black;
+}
