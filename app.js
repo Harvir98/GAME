@@ -1,7 +1,11 @@
 // document.addEventListener("DOMCONTENTLOADED", () => {
-const squares = document.getElementsByClassName("box__individualbox")
-const scoreDisplay = document.querySelector("span")
-const startBtn = document.querySelector(".gamebuttons__start")
+const squares = document.getElementsByClassName("box__individualbox");
+const scoreDisplay = document.querySelector("span");
+const startBtn = document.querySelector(".gamebuttons__start");
+const arrowUpBtn = document.getElementById("arrowup");
+const arrowDownBtn = document.getElementById("arrowdown");
+const arrowLeftBtn = document.getElementById("arrowleft");
+const arrowRightBtn = document.getElementById("arrowright");
 
 
 console.log(startBtn)
@@ -98,27 +102,23 @@ const control = (event) => {
   }
 }
 
-const arrowUp = document.getElementById("arrowup");
-const arrowDown = document.getElementById("arrowdown");
-const arrowLeft = document.getElementById("arrowleft");
-const arrowRight = document.getElementById("arrowright");
+  arrowUpBtn.addEventListener("click", event => {
+    direction =-width
+  })
+
+  arrowDownBtn.addEventListener("click", event => {
+    direction =+width
+  })
+
+  arrowLeftBtn.addEventListener("click", event => {
+    direction = -1
+  })
+
+  arrowRightBtn.addEventListener("click", event => {
+    direction = 1
+  })
 
 
-arrowUp.addEventListener("click", event => {
-  direction =-width
-})
-
-arrowDown.addEventListener("click", event => {
-  direction =+width
-})
-
-arrowLeft.addEventListener("click", event => {
-  direction = -1
-})
-
-arrowRight.addEventListener("click", event => {
-  direction = 1
-})
  
 document.addEventListener("keydown", control);
 startBtn.addEventListener("click", startGame);
