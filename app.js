@@ -66,6 +66,7 @@ const moveOutcomes = () => {
   currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the array
 
   //deals with snake getting apple
+  
   if(squares[currentSnake[0]].classList.contains('food')) { 
     squares[currentSnake[0]].classList.remove('food')
     squares[tail].classList.add('snake')
