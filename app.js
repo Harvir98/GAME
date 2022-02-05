@@ -1,7 +1,9 @@
 // document.addEventListener("DOMCONTENTLOADED", () => {
 const squares = document.getElementsByClassName("box__individualbox")
 const scoreDisplay = document.querySelector("span")
-const startBtn = document.querySelector(".start")
+const startBtn = document.querySelector(".gamebuttons__start")
+
+
 console.log(startBtn)
 
 const width = 10 // width of the grid is 10 
@@ -25,7 +27,7 @@ const startGame = () => {
   randomApple()
   direction = 1
   scoreDisplay.innerText = score // maybe can change to .HTML
-  intervalTime = 1000
+  intervalTime = 800
   currentSnake = [2, 1, 0]
   currentIndex = 0
   currentSnake.forEach(index => squares[index].classList.add("snake"))
@@ -35,9 +37,10 @@ const startGame = () => {
 
 const randomApple = () => {
   do{
-    appleIndex = Math.floor(Math.random() * squares.length)
-  } while (squares[appleIndex].classList.contains("snake"))
+    appleIndex = Math.floor(Math.random() * squares.length) //generating random number
+  } while (squares[appleIndex].classList.contains("snake")) // if one the sqaures that contains the food also contains the snake class, genrate a new apple
   squares[appleIndex].classList.add("food")
+  console.log(randomApple)
 }
 
 
@@ -78,10 +81,6 @@ const moveOutcomes = () => {
 }
 
 
-
-
-
-
 // Function for keys
 
 const control = (event) => {
@@ -98,8 +97,17 @@ const control = (event) => {
   }
 }
 
-document.addEventListener("keyup", control);
+document.addEventListener("keydown", control);
 startBtn.addEventListener("click", startGame);
+
+
+
+
+
+
+
+
+
 // })
 
 
