@@ -61,7 +61,7 @@ const moveOutcomes = () => {
     return clearInterval(interval) //this will clear the interval if any of the above happen
   }
 
-  const tail = currentSnake.pop() //removes last ite of the array and shows it
+  const tail = currentSnake.pop() //removes last item of the array (tail)
   squares[tail].classList.remove('snake')  //removes class of snake from the TAIL
   currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the array
 
@@ -98,6 +98,28 @@ const control = (event) => {
   }
 }
 
+const arrowUp = document.getElementById("arrowup");
+const arrowDown = document.getElementById("arrowdown");
+const arrowLeft = document.getElementById("arrowleft");
+const arrowRight = document.getElementById("arrowright");
+
+
+arrowUp.addEventListener("click", event => {
+  direction =-width
+})
+
+arrowDown.addEventListener("click", event => {
+  direction =+width
+})
+
+arrowLeft.addEventListener("click", event => {
+  direction = -1
+})
+
+arrowRight.addEventListener("click", event => {
+  direction = 1
+})
+ 
 document.addEventListener("keydown", control);
 startBtn.addEventListener("click", startGame);
 
