@@ -26,7 +26,7 @@ const startGame = () => {
   squares[badAppleIndex].classList.remove("bad")
   clearInterval(interval) // Resetting interval back to 0
   randomApple()
-  randomBadFood() // function created later that generated apple if 
+  randomBadFood()// function created later that generates apple
   direction = 1
   scoreDisplay.innerHTML = score // 
   intervalTime = 800
@@ -45,7 +45,11 @@ const randomApple = () => {
   squares[appleIndex].classList.add("food")
 }
 
-
+const randomBadFood = () => {
+  badAppleIndex = Math.floor(Math.random() * squares.length)
+  squares[badAppleIndex].classList.add("bad")
+}
+  
 
 // Function for all outcomes of the snake 
 
@@ -68,7 +72,13 @@ const moveOutcomes = () => {
   squares[tail].classList.remove('snake')  //removes class of snake from the TAIL
   currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the array
 
-  // Dealing with snake getting the apple and consequences
+  // Dealing with snake getting the good and bad apple and consequences
+ 
+    if (squares[currentSnake[0]].classList.contains("bad")) {
+    squares[currentSnake[0]].classList.remove("bad")
+    clearInterval(interval)
+    alert("gameover")
+    }
 
   if(squares[currentSnake[0]].classList.contains('food')) { 
     squares[currentSnake[0]].classList.remove('food')
@@ -84,16 +94,6 @@ const moveOutcomes = () => {
   squares[currentSnake[0]].classList.add('snake') // Add snake class to the head
 }
 
-const randomBadFood = () => {
-  do{
-  badAppleIndex = Math.floor(Math.random() * squares.length)
-  squares[badAppleIndex].classList.add("bad")
-  console.log(badAppleIndex)
-  } while (squares[badAppleIndex].classList.contains("snake"))
-  const tail2 = currentSnake.pop()
-  squares[tail2].classList.remove("snake") 
-
-}
 // Function for keys
 
 const control = (event) => {
