@@ -1,5 +1,5 @@
-const squares = document.getElementsByClassName("box__individualbox");
 const scoreDisplay = document.querySelector("span");
+const squares = document.getElementsByClassName("box__individualbox");
 const startBtn = document.querySelector(".gamebuttons__start");
 const arrowUpBtn = document.getElementById("arrowup");
 const arrowDownBtn = document.getElementById("arrowdown");
@@ -50,10 +50,9 @@ const randomBadFood = () => {
   squares[badAppleIndex].classList.add("bad")
 }
   
-
 // Function for all outcomes of the snake 
 
-// deal with snake hittin the wall
+// Dealing with snake hittin the walls
 
 const moveOutcomes = () => {
   
@@ -64,21 +63,21 @@ const moveOutcomes = () => {
     (currentSnake[0] - width < 0 && direction === -width) ||  //if snake hits the top
     (squares[currentSnake[0] + direction].classList.contains('snake')) //if snake goes into itself
   ) {
-    alert("Game Over!!")
+    alert("Game Over!")
     return clearInterval(interval) //this will clear the interval if any of the above happen
   }
 
-  const tail = currentSnake.pop() //removes last item of the array (tail)
-  squares[tail].classList.remove('snake')  //removes class of snake from the TAIL
-  currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the array
+  const tail = currentSnake.pop() 
+  squares[tail].classList.remove('snake')
+  currentSnake.unshift(currentSnake[0] + direction) 
 
   // Dealing with snake getting the good and bad apple and consequences
  
-    if (squares[currentSnake[0]].classList.contains("bad")) {
+  if (squares[currentSnake[0]].classList.contains("bad")) {
     squares[currentSnake[0]].classList.remove("bad")
     clearInterval(interval)
-    alert("gameover")
-    }
+    alert("Game Over!")
+  }
 
   if(squares[currentSnake[0]].classList.contains('food')) { 
     squares[currentSnake[0]].classList.remove('food')
@@ -97,7 +96,6 @@ const moveOutcomes = () => {
 // Function for keys
 
 const control = (event) => {
-  squares[currentIndex].classList.remove("snake")
 
   if (event.keyCode === 39) {
     direction = 1
