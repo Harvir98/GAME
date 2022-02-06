@@ -21,12 +21,12 @@ let interval = 0
 // Start and restarting the game
 
 const startGame = () => {
-  console.log("working")
   currentSnake.forEach(index => squares[index].classList.remove("snake"))
   squares[appleIndex].classList.remove("food")
-  squares[appleIndex].classList.remove("bad")
+  squares[badAppleIndex].classList.remove("bad")
   clearInterval(interval) // Resetting interval back to 0
-  randomApple() // function created later that generated apple if 
+  randomApple()
+  randomBadFood() // function created later that generated apple if 
   direction = 1
   scoreDisplay.innerHTML = score // maybe can change to .HTML
   intervalTime = 800
@@ -39,29 +39,21 @@ const startGame = () => {
 
 const randomApple = () => {
   do{
-    appleIndex = Math.floor(Math.random() * squares.length) //generating random number
+    appleIndex = Math.floor(Math.random() * squares.length)
+    console.log(appleIndex) //generating random number
   } while (squares[appleIndex].classList.contains("snake")) // if one the sqaures that contains the food also contains the snake class, genrate a new apple
   squares[appleIndex].classList.add("food")
-  console.log(randomApple)
 }
 
-let randomFood = [Math.floor(Math.random() * squares.length)]
-console.log(randomFood)
-const randomFoodGenerator = (randomFood) => {
-  randomFood.classList.add.("bad")
-  if (squares[currentSnake[0]].classList.contains("bad")) {
-    console.log("bad")
-  }
+const randomBadFood = () => {
+  do{
+  badAppleIndex = Math.floor(Math.random() * squares.length)
+  squares[badAppleIndex].classList.add("bad")
+  console.log(badAppleIndex)
+  } while (squares[badAppleIndex].classList.contains("snake"))
+  const tail2 = currentSnake.pop()
+  squares[tail2].classList.remove("snake")
 }
-
-const badApple = () => {
-
-  if (squares[currentSnake].classList.contains("bad")) {
-    squares[badAppleIndex].classList.add("bad")
-  }
-}
-
-
 
 // Function for all outcomes of the snake 
 
@@ -74,7 +66,7 @@ const moveOutcomes = () => {
     (currentSnake[0] % width === width -1 && direction === 1) || //if snake hits right wall
     (currentSnake[0] % width === 0 && direction === -1) || //if snake hits left wall
     (currentSnake[0] - width < 0 && direction === -width) ||  //if snake hits the top
-    squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
+    (squares[currentSnake[0] + direction].classList.contains('snake')) //if snake goes into itself
   ) {
     alert("Game Over!!")
     return clearInterval(interval) //this will clear the interval if any of the above happen
