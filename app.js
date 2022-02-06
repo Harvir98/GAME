@@ -9,6 +9,7 @@ const arrowRightBtn = document.getElementById("arrowright");
 const width = 10 // width of the grid is 10 
 let currentIndex = 0 // let becuase index will change and 0 will be first div in grid
 let appleIndex = 0 // first div in grid 
+let badAppleIndex = 0
 let currentSnake = [2, 1, 0] // head = 2, 0 = tail, 1 = body part
 let direction = 1 // should always move 1 div
 let score = 0
@@ -23,6 +24,7 @@ const startGame = () => {
   console.log("working")
   currentSnake.forEach(index => squares[index].classList.remove("snake"))
   squares[appleIndex].classList.remove("food")
+  squares[appleIndex].classList.remove("bad")
   clearInterval(interval) // Resetting interval back to 0
   randomApple() // function created later that generated apple if 
   direction = 1
@@ -42,6 +44,23 @@ const randomApple = () => {
   squares[appleIndex].classList.add("food")
   console.log(randomApple)
 }
+
+let randomFood = [Math.floor(Math.random() * squares.length)]
+console.log(randomFood)
+const randomFoodGenerator = (randomFood) => {
+  randomFood.classList.add.("bad")
+  if (squares[currentSnake[0]].classList.contains("bad")) {
+    console.log("bad")
+  }
+}
+
+const badApple = () => {
+
+  if (squares[currentSnake].classList.contains("bad")) {
+    squares[badAppleIndex].classList.add("bad")
+  }
+}
+
 
 
 // Function for all outcomes of the snake 

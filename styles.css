@@ -79,6 +79,10 @@ h3 {
   background-color: green;
 }
 
+.bad {
+  background-color: black;
+}
+
 .snake {
   background-color: #310505;
 }

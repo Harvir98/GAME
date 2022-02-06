@@ -60,6 +60,10 @@ h3 {
   background-color: green
 }
 
+.bad {
+  background-color: black;
+}
+
 .snake { 
   background-color: rgb(49, 5, 5);
 }
@@ -82,7 +86,6 @@ h3 {
   #arrowup {
     @include physicalbuttons();
     grid-area: a;
-    
     
   }
 
