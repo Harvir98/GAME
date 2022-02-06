@@ -28,7 +28,7 @@ const startGame = () => {
   randomApple()
   randomBadFood() // function created later that generated apple if 
   direction = 1
-  scoreDisplay.innerHTML = score // maybe can change to .HTML
+  scoreDisplay.innerHTML = score // 
   intervalTime = 800
   currentSnake = [2, 1, 0]
   currentIndex = 0

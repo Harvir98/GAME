@@ -29,8 +29,6 @@ h3 {
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-
 
   &__individualbox {
     border: solid 1.5px white;
