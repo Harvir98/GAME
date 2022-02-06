@@ -45,15 +45,7 @@ const randomApple = () => {
   squares[appleIndex].classList.add("food")
 }
 
-const randomBadFood = () => {
-  do{
-  badAppleIndex = Math.floor(Math.random() * squares.length)
-  squares[badAppleIndex].classList.add("bad")
-  console.log(badAppleIndex)
-  } while (squares[badAppleIndex].classList.contains("snake"))
-  const tail2 = currentSnake.pop()
-  squares[tail2].classList.remove("snake")
-}
+
 
 // Function for all outcomes of the snake 
 
@@ -92,7 +84,16 @@ const moveOutcomes = () => {
   squares[currentSnake[0]].classList.add('snake') // Add snake class to the head
 }
 
+const randomBadFood = () => {
+  do{
+  badAppleIndex = Math.floor(Math.random() * squares.length)
+  squares[badAppleIndex].classList.add("bad")
+  console.log(badAppleIndex)
+  } while (squares[badAppleIndex].classList.contains("snake"))
+  const tail2 = currentSnake.pop()
+  squares[tail2].classList.remove("snake") 
 
+}
 // Function for keys
 
 const control = (event) => {
