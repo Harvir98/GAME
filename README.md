@@ -4,7 +4,5 @@ Hi, and welcome to my game "SNAKE". Growing up Snake was one of my favourite gam
 
 To create Snake, I used: 
 
-HTML 
-CSS (SCSS)
-Javascript
+HTML, CSS (SCSS), Javascript
 
